@@ -1,2 +1,5 @@
-﻿# Treat all text files without a CR (as we have Docker)
-* text eol=lf
+﻿# Treat .conf and .sh files without a CR (as we have Docker)
+* text=auto
+*.conf    eol=lf
+*.sh      eol=lf
+Dockerfile  text
