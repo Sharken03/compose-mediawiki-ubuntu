@@ -250,6 +250,9 @@ switch( getenv( 'MW_SEARCH_TYPE' ) ) {
         $wgSearchType = null;
 }
 
+######################### File extensions ##########################
+$wgFileExtensions = array_merge( $wgFileExtensions, array( 'doc', 'xls', 'mpp', 'pdf', 'ppt', 'xlsx', 'jpg', 'tiff', 'odt', 'odg', 'ods', 'odp'));
+
 ######################### Math ##########################
 wfLoadExtension( 'Math' );
 $wgMathoidCli = ["$IP/extensions/Math/node_modules/mathoid/cli.js", "-c", "$IP/extensions/Math/node_modules/mathoid/config.dev.yaml"];
