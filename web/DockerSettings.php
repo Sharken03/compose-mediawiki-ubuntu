@@ -250,6 +250,12 @@ switch( getenv( 'MW_SEARCH_TYPE' ) ) {
         $wgSearchType = null;
 }
 
+######################### Math ##########################
+wfLoadExtension( 'Math' );
+$wgMathoidCli = ["$IP/extensions/Math/node_modules/mathoid/cli.js", "-c", "$IP/extensions/Math/node_modules/mathoid/config.dev.yaml"];
+$wgDefaultUserOptions['math'] = 'mathml';
+$wgMaxShellMemory = 2097152;
+
 ######################### MultimediaViewer ##########################
 wfLoadExtension('MultimediaViewer');
 
