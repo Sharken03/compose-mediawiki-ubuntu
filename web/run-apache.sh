@@ -171,7 +171,7 @@ if [ $MW_AUTOUPDATE == 'true' ]; then
     ### cldr extension
     if [ -n "$MW_SCRIPT_CLDR_REBUILD" ]; then
     run_script_if_needed 'script_cldr_rebuild' "$MW_VERSION-$MW_SCRIPT_CLDR_REBUILD" \
-        'set -x; cd $MW_HOME/extensions/cldr && wget -q http://www.unicode.org/Public/cldr/latest/core.zip && unzip -q core.zip -d core && php rebuild.php && set +x;'
+        'set -x; cd $MW_HOME/extensions/cldr && wget -q http://www.unicode.org/Public/cldr/latest/core.zip && unzip -o -q core.zip -d core && php rebuild.php && set +x;'
 
         if [ -n "$MW_MAINTENANCE_ULS_INDEXER" ]; then
             ### UniversalLanguageSelector extension
