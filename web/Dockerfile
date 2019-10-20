@@ -31,6 +31,9 @@ RUN set -x; \
         wget \
         nano \
         curl \
+        xpdf-utils \
+        ghostscript \
+        imagemagick \
     && pear install mail net_smtp \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/cache/apt/archives/* \
