@@ -66,7 +66,7 @@ services:
         restart: always
 
     parsoid:
-        image: pastakhov/parsoid:0.7.1
+        image: thenets/parsoid:0.10
         restart: always
         environment:
             - PARSOID_NUM_WORKERS=0
